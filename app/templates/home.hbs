@@ -1,0 +1,28 @@
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        {{user.name}}
+        {{log session.uid}}
+        
+            {{#if user}}
+            <div class="small-12">Hi!
+                YOu wanna make a new fucking list?
+                {{input value=listName}}
+                <button class="button" {{action "newList"}}>Make</button>
+            </div>
+            <div class="small-12">
+                <ul>
+                    {{#each user.list as |l|}}
+                       {{#link-to "list" l}} {{ l.listName}} {{/link-to}}
+                    {{/each}}
+                </ul>
+            </div>
+            {{else}}
+            <div class="small-12">
+                <h1>Welcome New User</h1>
+                {{input value=name  placeholder=session.currentUser.displayName}}
+                <button class="button" {{ action "saveUser"}}>Continue</button>
+            </div>
+            {{/if}} 
+    </div>
+</div>
+{{outlet}}

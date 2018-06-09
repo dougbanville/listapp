@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+      <div class="small-12">
+          {{#if session.isAuthenticated}}
+  Logged in as {{session.currentUser.displayName}}
+  <button {{action "signOut"}} class="button warning">Sign out</button>
+{{#link-to "home"}}
+  <button class="button success">Continue</button>
+  {{/link-to}}
+{{else}}
+  <button {{action "signIn" "twitter"}}>Sign in with Twitter</button>
+{{/if}}
+      </div>
+  </div>
+</div>
 
 {{outlet}}

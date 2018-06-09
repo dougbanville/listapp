@@ -1,0 +1,35 @@
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="small-6 cell">
+            <h1>{{model.listName}}</h1>
+        </div>
+        <div class="small-6 cell">
+            <a href="sms:?&body={{ shareUrl}}">
+            <button class="button info tiny">
+                <i class="fa fa-comment"></i>
+                Share</button>
+            </a>
+            {{#link-to "shared" model}}
+            <button class="button tiny">Preview</button>
+            {{/link-to}}
+        </div>
+        <div class="small-12 cell">
+            {{input value=name}}
+            <button class="button success expanded" {{action "addListItem"}}>
+                <i class="fa fa-plus"></i>
+                Add
+            </button>
+        </div>
+        <div class="small-12 cell">
+            <ul class="vertical menu">
+            {{#each model.listItem as |i|}}
+                <li>{{i.name}} <button class="tiny" {{action "deleteListItem" i}}>
+                    <i class="fa fa-trash"></i>
+                </button></li>
+            {{/each}}
+            </ul>
+        </div>
+        
+</div>
+</div>
+{{outlet}}
