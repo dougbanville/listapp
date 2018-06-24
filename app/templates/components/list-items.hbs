@@ -1,0 +1,14 @@
+<div class="grid-x grid-margin-x">
+            {{#each list as |i index|}}
+            {{#if i.active}}
+                <button class="large expanded button secondary" {{action "check" i}} >
+                    <span style="text-decoration: line-through;">{{i.name}}</span>
+                </button>
+            {{else}}
+                <button class="large expanded button redListItems" {{action "check" i}} >
+                    {{i.name}}
+                </button>
+                {{/if}}
+            {{/each}}
+</div>
+{{yield}}

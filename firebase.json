@@ -1,0 +1,10 @@
+{
+    "hosting": {
+      "firebase": "listapp",
+      "public": "dist",
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }
+  }

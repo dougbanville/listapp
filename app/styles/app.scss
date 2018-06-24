@@ -1,3 +1,18 @@
 @import "settings";
 @import 'foundation-sites/foundation';
 @include foundation-everything;
+
+.list-items{
+    .button{
+        margin: 0 0 0 0;
+        border-bottom: 1px solid $white;
+        background-color:rgba(217, 0, 21, 1)!important;
+    }
+    .secondary{
+        background-color:rgba(217, 0, 21, 0.5)!important;
+
+    }
+}
+.redListItem{
+    background-color:rgba(217, 0, 21, 1)!important;
+}
