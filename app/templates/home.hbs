@@ -10,9 +10,13 @@
                 <button class="button" {{action "newList"}}>Make</button>
             </div>
             <div class="small-12">
-                <ul>
+                <ul class="vertical menu">
                     {{#each user.list as |l|}}
-                       {{#link-to "list" l}} {{ l.listName}} {{/link-to}}
+                      <li> {{#link-to "list" l}} {{ l.listName}} {{/link-to}}
+                           {{input value=l.listName}}
+                           <button class="tiny button" {{action "deleteList" l}}>
+                           <i class="fa fa-trash"></i>
+                       </button></li> 
                     {{/each}}
                 </ul>
             </div>

@@ -5,8 +5,9 @@ export default Controller.extend({
     recipe: false,
 
     shareUrl: Ember.computed('model', function(){
-		let id = this.get('model').id;
-		return `http://localhost:4200/${id}`;
+        let id = this.get('model').id;
+        let hostName = window.location.hostname;
+		return `${hostName}/${id}`;
 	}),
 
 

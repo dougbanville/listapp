@@ -36,6 +36,12 @@ export default Controller.extend({
               newList.save().then(function() {
                 return userTable.save();
               });
+        },
+        deleteList(list){
+
+            console.log(list.get("name"))
+            //let listName = list.get("name");
+            //alert(listName)
         }
     }
 });

@@ -7,7 +7,7 @@
   Logged in as {{session.currentUser.displayName}}
   <button {{action "signOut"}} class="button warning">Sign out</button>
 {{#link-to "home"}}
-  <button class="button success">YOur Lists</button>
+  <button class="button success">Your Lists</button>
   {{/link-to}}
 {{else}}
   <button {{action "signIn" "twitter"}}>Sign in with Twitter</button>
