@@ -14,6 +14,9 @@ Router.map(function() {
   this.route('shared',{
     path: ":id"
   });
+  this.route('recipe',{
+    path: "recipe/:recipeId/"
+  });
 });
 
 export default Router;

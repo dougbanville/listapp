@@ -1,0 +1,14 @@
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="small-12 cell">
+            <h1>{{model.name}}</h1>
+            {{input value=model.name}}
+        </div>
+        <div class="small-12 cell">
+            {{input value=model.content}}
+            {{model.content}}
+            <button class="button success expanded" {{action "save"}}>Save</button>
+        </div>
+    </div>
+</div>
+{{outlet}}

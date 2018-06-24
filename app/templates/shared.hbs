@@ -1,3 +1,13 @@
 
 {{list-items list=model.listItem check=(action "check")}}
+<div class="grid-x grid-margin-x">
+    <div class="small-12 cell">
+        <h1>Recipes</h1>
+        <ul>
+            {{#each model.recipe as |r|}}
+                {{r.name}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
 {{outlet}}
